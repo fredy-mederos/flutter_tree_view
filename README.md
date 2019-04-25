@@ -1,70 +1,16 @@
-[![pub package](https://img.shields.io/badge/pub-0.0.5-orange.svg)](https://pub.dartlang.org/packages/tree_view)
-[![Build Status](https://travis-ci.org/ajilo297/flutter_tree_view.svg?branch=master)](https://travis-ci.org/ajilo297/flutter_tree_view)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# example
 
-# Tree View
-A Flutter package for a fully customisable tree view
+A new Flutter project.
 
-### Installing
-Add this to your `pubspec.yaml` file
+## Getting Started
 
-```yaml
-dependencies:
-  tree_view: ^0.0.5
-```
+This project is a starting point for a Flutter application.
 
-And run 
-```sh
-flutter packages get
-```
+A few resources to get you started if this is your first Flutter project:
 
-### Example
+- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
 
-Let's assume we want to show a tree view with this structure:
-
-```
-Desktop
-|-- documents
-|   |-- Resume.docx
-|   |-- Billing-Info.docx
-|-- MeetingReport.xls
-|-- MeetingReport.pdf
-|-- Demo.zip
-```
-
-In this example
-1. `Resume.docx` and `Billing-Info.docx` are **Child** widgets with
-`documents` as the **Parent**.
-2. `documents`, `MeetingReport.xls`, `MeetingReport.xls` and `Demo.zip`
-are **Child** widgets with `Desktop` as a **Parent** widget.
-
-The `TreeView` would look like this
-
-```dart
-var treeView = TreeView(
-  parentList: [
-    Parent(
-      parent: Text('Desktop'),
-      childList: ChildList(
-        children: <Widget>[
-          Parent(
-            parent: Text('documents'),
-            childList: ChildList(
-              children: <Widget>[
-                Text('Resume.docx'),
-                Text('Billing-Info.docx'),
-              ],
-            ),
-          ),
-          Text('MeetingReport.xls'),
-          Text('MeetingReport.pdf'),
-          Text('Demo.zip'),
-        ],
-      ),
-    ),
-  ],
-);
-```
-
-#### Sample
-<a href="https://imgur.com/d4n4p1b"><img src="https://i.imgur.com/d4n4p1b.gif" title="source: imgur.com" /></a>
+For help getting started with Flutter, view our 
+[online documentation](https://flutter.io/docs), which offers tutorials, 
+samples, guidance on mobile development, and a full API reference.
